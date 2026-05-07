@@ -7,7 +7,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/plain; charset=utf-8')
         self.end_headers()
         app = os.environ.get('APP', 'LMS')
-        message = f"Hello from {app}! 👋\nPath: {self.path}\n"
+        message = f"Hello from {app}! v2 👋\nPath: {self.path}\n"
         self.wfile.write(message.encode())
 
 port = int(os.getenv('PORT', 8000))
